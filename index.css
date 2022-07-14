@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Manrope:wght@800&family=Staatliches&family=Zen+Kurenaido&display=swap');
+:root {
+/*
+Colors
+### Primary
+*/
+
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Neon-Green-minus: hsl(150, 50%, 66%);
+
+/*
+### Neutral
+*/
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+body{
+    font-size: 28px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
+    background-color: var(--Dark-Blue);
+    color: var(--Light-Cyan);
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Dark-Grayish-Blue);
+    border-radius: 1rem;
+    width: min-content;
+    text-align: center;
+    padding: 2.5rem;
+    position: relative;
+    
+}
+.card > * {
+    display: block;
+    margin-bottom: 1.375rem;
+}
+
+.advice-span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: var(--Neon-Green);
+}
+
+.card-quote-generator{
+    background-color: var(--Neon-Green);
+    padding: 1.25rem;
+    border-radius: 2rem;
+    line-height: 0;
+    position: absolute;
+    top: calc(100% - 2rem);
+}
+.card-quote-generator:active {
+    animation: spin 300ms linear infinite;
+    background-color: var(--Neon-Green-minus);
+}
+.card-quote-generator:hover {
+    box-shadow: 0px 0px 0.5rem  var(--Neon-Green)
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 375px) {
+    body {
+       font-size: 24px;
+    }
+    .card {
+        padding: 2.25rem 1.5rem;
+        border-radius: 0.75rem;
+    }
+    .card > * {
+        margin-bottom: 1.25rem;
+    }
+}
